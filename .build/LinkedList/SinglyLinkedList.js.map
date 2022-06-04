@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../LinkedList/SinglyLinkedList.ts"],
+  "sourcesContent": ["console.log('I am a SinglyLinkedList');"],
+  "mappings": "AAAA,QAAQ,IAAI;",
+  "names": []
+}
