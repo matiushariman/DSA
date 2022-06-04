@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": [],
-  "sourcesContent": [],
-  "mappings": "",
+  "sources": ["../index.ts"],
+  "sourcesContent": ["hola\nmate\n"],
+  "mappings": "AAAA;AACA;",
   "names": []
 }
