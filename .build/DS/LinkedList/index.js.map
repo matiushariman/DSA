@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../DS/LinkedList/index.ts"],
+  "sourcesContent": ["export * from './SinglyLinkedList';"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;",
+  "names": []
+}

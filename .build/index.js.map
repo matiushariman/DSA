@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["hola\nmate\n"],
-  "mappings": "AAAA;AACA;",
+  "sourcesContent": ["import { runArray, runSinglyLinkedList } from './DS';\n\nrunArray();\nrunSinglyLinkedList();"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,gBAA8C;AAE9C;AACA;",
   "names": []
 }

@@ -1,3 +1,5 @@
+import { printStart, printEnd } from '../../utils';
+
 type SinglyLinkedListNode = {
   value: number;
   next: SinglyLinkedListNode | null;
@@ -109,14 +111,18 @@ const SinglyLinkedList = (value: number) => {
 };
 
 
-const myLinkedList = SinglyLinkedList(10);
-// 10 -> 5
-myLinkedList.append(5);
-// 10 -> 5 -> 16
-myLinkedList.append(16);
-// 1 -> 10 -> 5 -> 16
-myLinkedList.prepend(1);
-// 1 -> 10 -> 99 -> 5 -> 16
-myLinkedList.insert(2, 99);
-myLinkedList.remove(2);
-
+export function runSinglyLinkedList() {
+  const sectionName = 'Singly Linked List';
+  printStart(sectionName);
+  const myLinkedList = SinglyLinkedList(10);
+  // 10 -> 5
+  myLinkedList.append(5);
+  // 10 -> 5 -> 16
+  myLinkedList.append(16);
+  // 1 -> 10 -> 5 -> 16
+  myLinkedList.prepend(1);
+  // 1 -> 10 -> 99 -> 5 -> 16
+  myLinkedList.insert(2, 99);
+  myLinkedList.remove(2);
+  printEnd(sectionName);
+}
