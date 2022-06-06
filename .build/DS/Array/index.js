@@ -28,20 +28,36 @@ var import_utils = __toModule(require("../../utils"));
 const MyArray = () => {
   let length = 0;
   const data = {};
+  const printArray = () => {
+    console.log(`Array: ${JSON.stringify(data)}, length: ${length}`);
+  };
   const get = (index) => data[index];
   const push = (item) => {
     data[length] = item;
     length++;
-    console.log(`pushing ${item} to the array.`);
-    console.log(`array: ${data}`);
+    console.log(`Pushing ${item} to the array.`);
+    printArray();
   };
   const pop = () => {
     delete data[length - 1];
     length--;
+    console.log(`Removing (pop) item from the array.`);
+    printArray();
+  };
+  const shift = () => {
+    for (let i = 0; i < length; i++) {
+      data[i] = data[i + 1];
+    }
+    delete data[length - 1];
+    length--;
+    console.log(`Removing (shift) item from the array.`);
+    printArray();
   };
   return {
     get,
-    push
+    push,
+    pop,
+    shift
   };
 };
 function runArray() {
@@ -50,6 +66,9 @@ function runArray() {
   const newArray = MyArray();
   newArray.push(1);
   newArray.push(2);
+  newArray.push(3);
+  newArray.pop();
+  newArray.shift();
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:
