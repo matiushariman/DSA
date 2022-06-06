@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../DS/Array/index.ts"],
-  "sourcesContent": ["import { printEnd, printStart } from '../../utils';\n\nexport function runArray() {\n  const sectionName = 'Array';\n  printStart(sectionName);\n  printEnd(sectionName);\n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAqC;AAE9B,oBAAoB;AACzB,QAAM,cAAc;AACpB,+BAAW;AACX,6BAAS;AAAA;",
+  "sourcesContent": ["import { printEnd, printStart } from '../../utils';\n\nconst MyArray = () => {\n  let length = 0;\n  const data: {[key: string]: string | number} = {};\n\n  const get = (index:number) => data[index];\n\n  /** add new item to the end of the array **/\n  const push = (item:string|number):void => {\n    data[length] = item;\n    length++;\n\n    console.log(`pushing ${item} to the array.`)\n    console.log(`array: ${data}`)\n  }\n\n  /** remove last item from the array **/\n  const pop = ():void => {\n    delete data[length - 1];\n    length--;\n  }\n  \n  return {\n    get,\n    push,\n  };\n};\n\nexport function runArray() {\n  const sectionName = 'Array';\n  printStart(sectionName);\n  const newArray = MyArray();\n  newArray.push(1);\n  newArray.push(2);\n  printEnd(sectionName);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAqC;AAErC,MAAM,UAAU,MAAM;AACpB,MAAI,SAAS;AACb,QAAM,OAAyC;AAE/C,QAAM,MAAM,CAAC,UAAiB,KAAK;AAGnC,QAAM,OAAO,CAAC,SAA4B;AACxC,SAAK,UAAU;AACf;AAEA,YAAQ,IAAI,WAAW;AACvB,YAAQ,IAAI,UAAU;AAAA;AAIxB,QAAM,MAAM,MAAW;AACrB,WAAO,KAAK,SAAS;AACrB;AAAA;AAGF,SAAO;AAAA,IACL;AAAA,IACA;AAAA;AAAA;AAIG,oBAAoB;AACzB,QAAM,cAAc;AACpB,+BAAW;AACX,QAAM,WAAW;AACjB,WAAS,KAAK;AACd,WAAS,KAAK;AACd,6BAAS;AAAA;",
   "names": []
 }

@@ -25,9 +25,31 @@ __export(exports, {
   runArray: () => runArray
 });
 var import_utils = __toModule(require("../../utils"));
+const MyArray = () => {
+  let length = 0;
+  const data = {};
+  const get = (index) => data[index];
+  const push = (item) => {
+    data[length] = item;
+    length++;
+    console.log(`pushing ${item} to the array.`);
+    console.log(`array: ${data}`);
+  };
+  const pop = () => {
+    delete data[length - 1];
+    length--;
+  };
+  return {
+    get,
+    push
+  };
+};
 function runArray() {
   const sectionName = "Array";
   (0, import_utils.printStart)(sectionName);
+  const newArray = MyArray();
+  newArray.push(1);
+  newArray.push(2);
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:
