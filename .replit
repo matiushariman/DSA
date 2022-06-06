@@ -1,9 +1,9 @@
 compile = ["./.config/build.sh"]
-run = ["node", "--enable-source-maps", ".build/LinkedList/SinglyLinkedList.js"]
+run = ["node", "--enable-source-maps", ".build/index.js"]
 
 hidden = [".build", ".config"]
 
-entrypoint = "LinkedList/SinglyLinkedList.ts"
+entrypoint = "index.ts"
 
 [languages.typescript]
 pattern = "**/{*.ts,*.js,*.tsx,*.jsx}"

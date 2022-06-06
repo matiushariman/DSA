@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../utils.ts"],
+  "sourcesContent": ["/**\nprint the beginning of section name\n**/\nconst printStart =(sectionName:string):void => {\n  console.log(`=== ${sectionName.toUpperCase()} START ===`);\n};\n\n/**\nprint the end of section name\n**/\nconst printEnd =(sectionName:string):void => {\n  console.log(`=== ${sectionName.toUpperCase()} END ===\\n`);\n};\n\nexport { printEnd, printStart };"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAGA,MAAM,aAAY,CAAC,gBAA4B;AAC7C,UAAQ,IAAI,OAAO,YAAY;AAAA;AAMjC,MAAM,WAAU,CAAC,gBAA4B;AAC3C,UAAQ,IAAI,OAAO,YAAY;AAAA;AAAA;",
+  "names": []
+}

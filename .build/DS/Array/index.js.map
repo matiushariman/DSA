@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../DS/Array/index.ts"],
+  "sourcesContent": ["import { printEnd, printStart } from '../../utils';\n\nexport function runArray() {\n  const sectionName = 'Array';\n  printStart(sectionName);\n  printEnd(sectionName);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAqC;AAE9B,oBAAoB;AACzB,QAAM,cAAc;AACpB,+BAAW;AACX,6BAAS;AAAA;",
+  "names": []
+}

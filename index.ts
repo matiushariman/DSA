@@ -1,2 +1,4 @@
-hola
-mate
+import { runArray, runSinglyLinkedList } from './DS';
+
+runArray();
+runSinglyLinkedList();
