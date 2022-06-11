@@ -16,7 +16,9 @@ const Queue = () => {
   let last: MyNode = null;
   let length: number = 0;
 
+  /** return first item in the queue **/
   function peek() {
+    return first;
   }
 
   function enqueue(value:any) {
