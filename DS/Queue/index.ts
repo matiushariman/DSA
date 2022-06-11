@@ -21,10 +21,34 @@ const Queue = () => {
     return first;
   }
 
+  /** add item to the queue **/
   function enqueue(value:any) {
+    const newNode = MyNode(value);
+
+    if (length === 0) {
+      first = newNode;
+      last = newNode;
+    } else if (last) {
+        last.next = newNode;
+        last = newNode;
+      }
+    length++;
+    console.log(`After adding ${value} to the queue`)
+    console.log(JSON.stringify(first));
   }
 
+  /** remove the first element from the queue **/
   function dequeue() {
+    if (!first) {
+      return null;
+    } else if (first === last) {
+      last = null;
+    }
+  
+    console.log(`After removing ${first.value} from the queue`)
+    first = first.next;
+    length--;
+    console.log(JSON.stringify(first));
   }
 
   return {
@@ -37,5 +61,9 @@ const Queue = () => {
 export function runQueue() {
   const sectionName = 'Queue';
   printStart(sectionName);
+  const queue = Queue();
+  queue.enqueue('Hello');
+  queue.enqueue('World');
+  queue.dequeue();
   printEnd(sectionName);
 }

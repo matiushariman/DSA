@@ -34,10 +34,31 @@ const Queue = () => {
   let last = null;
   let length = 0;
   function peek() {
+    return first;
   }
   function enqueue(value) {
+    const newNode = MyNode(value);
+    if (length === 0) {
+      first = newNode;
+      last = newNode;
+    } else if (last) {
+      last.next = newNode;
+      last = newNode;
+    }
+    length++;
+    console.log(`After adding ${value} to the queue`);
+    console.log(JSON.stringify(first));
   }
   function dequeue() {
+    if (!first) {
+      return null;
+    } else if (first === last) {
+      last = null;
+    }
+    console.log(`After removing ${first.value} from the queue`);
+    first = first.next;
+    length--;
+    console.log(JSON.stringify(first));
   }
   return {
     peek,
@@ -48,6 +69,10 @@ const Queue = () => {
 function runQueue() {
   const sectionName = "Queue";
   (0, import_utils.printStart)(sectionName);
+  const queue = Queue();
+  queue.enqueue("Hello");
+  queue.enqueue("World");
+  queue.dequeue();
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:
