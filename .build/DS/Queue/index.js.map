@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../DS/Queue/index.ts"],
+  "sourcesContent": ["import { printStart, printEnd } from '../../utils';\n\n\ntype MyNode = {\n  value: null | any,\n  next: MyNode | null,\n};\n\nconst MyNode = (value: any): MyNode => ({\n  value,\n  next: null,\n});\n\nconst Queue = () => {\n  let first: MyNode = null;\n  let last: MyNode = null;\n  let length: number = 0;\n\n  function peek() {\n    \n  }\n\n  function enqueue(value) {\n    \n  }\n\n  function dequeue() {\n    \n  }\n\n  return {\n    peek,\n    enqueue,\n    dequeue,\n  };\n}\n\nexport function runQueue() {\n  const sectionName = 'Queue';\n  printStart(sectionName);\n  printEnd(sectionName);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAqC;AAQrC,MAAM,SAAS,CAAC,UAAwB;AAAA,EACtC;AAAA,EACA,MAAM;AAAA;AAGR,MAAM,QAAQ,MAAM;AAClB,MAAI,QAAgB;AACpB,MAAI,OAAe;AACnB,MAAI,SAAiB;AAErB,kBAAgB;AAAA;AAIhB,mBAAiB,OAAO;AAAA;AAIxB,qBAAmB;AAAA;AAInB,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA;AAAA;AAIG,oBAAoB;AACzB,QAAM,cAAc;AACpB,+BAAW;AACX,6BAAS;AAAA;",
+  "names": []
+}

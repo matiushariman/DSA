@@ -20,4 +20,5 @@ __markAsModule(exports);
 __reExport(exports, __toModule(require("./Array")));
 __reExport(exports, __toModule(require("./LinkedList")));
 __reExport(exports, __toModule(require("./Stack")));
+__reExport(exports, __toModule(require("./Queue")));
 //# sourceMappingURL=index.js.map
