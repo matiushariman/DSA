@@ -47,6 +47,7 @@ const Stack = () => {
       }
     }
     length++;
+    console.log(`After pushing ${value}:`);
     console.log(JSON.stringify(top));
   }
   return {
@@ -59,8 +60,8 @@ function runStack() {
   (0, import_utils.printStart)(sectionName);
   const stack = Stack();
   stack.peek();
-  stack.push("google");
-  stack.push("facebook");
+  stack.push("hello");
+  stack.push("world");
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:
