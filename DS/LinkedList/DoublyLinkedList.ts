@@ -1,29 +1,32 @@
 import { printStart, printEnd } from '../../utils';
 
-type SinglyLinkedListNode = {
+type DoublyLinkedListNode = {
   value: number;
-  next: SinglyLinkedListNode | null;
+  next: DoublyLinkedListNode | null;
+  prev: DoublyLinkedListNode | null;
 };
 
-const SinglyLinkedList = (value: number) => {
-  let head:SinglyLinkedListNode = {
+const DoublyLinkedList = (value: number) => {
+  let head:DoublyLinkedListNode = {
     value,
     next: null,
+    prev: null,
   };
   let tail = head;
   let length = 1;
 
-  function Node(value:number): SinglyLinkedListNode {
+  function Node(value:number): DoublyLinkedListNode {
     return {
       value,
       next: null,
+      prev: null,
     };  
   }
 
     /** print nodes value **/
   function printList():void {
     const arrNodes: number[] = [];
-    let currentNode: SinglyLinkedListNode | null = head;
+    let currentNode: DoublyLinkedListNode | null = head;
     
     while (currentNode !== null) {
       arrNodes.push(currentNode.value);
@@ -36,6 +39,7 @@ const SinglyLinkedList = (value: number) => {
   /** add new value to the end of SinglyLinkedList **/
   function append(value: number): void {
     const newNode = Node(value);
+    newNode.prev = tail;
     tail.next = newNode;
     tail = newNode;
     length++;
@@ -47,6 +51,7 @@ const SinglyLinkedList = (value: number) => {
   /** add new value to the start of SinglyLinkedList  **/
   function prepend(value:number): void {
     const newNode = Node(value);
+    head.prev = newNode;
     newNode.next = head;
     head = newNode;
     length++;
@@ -57,7 +62,7 @@ const SinglyLinkedList = (value: number) => {
 
   /** traverse to node of specific index **/
   function traverseToIndex(index: number) {
-    let currentNode: SinglyLinkedListNode | null = head;
+    let currentNode: DoublyLinkedListNode | null = head;
     let counter = 0;
 
     while (counter !== index && currentNode.next !== null) {
@@ -76,9 +81,15 @@ const SinglyLinkedList = (value: number) => {
 
     const newNode = Node(value);
     const leader = traverseToIndex(index - 1);
-    const pointer = leader.next;
+    const follower = leader.next;
     leader.next = newNode;
-    newNode.next = pointer;
+    newNode.prev = leader;
+    newNode.next = follower;
+
+    if (follower) {
+      follower.prev = newNode;
+    }
+    
     length++;
 
     console.log(`After inserting ${value} to index ${index}:`);
@@ -105,10 +116,10 @@ const SinglyLinkedList = (value: number) => {
 };
 
 
-export function runSinglyLinkedList() {
-  const sectionName = 'Singly Linked List';
+export function runDoublyLinkedList() {
+  const sectionName = 'Doubly Linked List';
   printStart(sectionName);
-  const myLinkedList = SinglyLinkedList(10);
+  const myLinkedList = DoublyLinkedList(10);
   // 10 -> 5
   myLinkedList.append(5);
   // 10 -> 5 -> 16

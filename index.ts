@@ -1,4 +1,5 @@
-import { runArray, runSinglyLinkedList } from './DS';
+import { runArray, runDoublyLinkedList, runSinglyLinkedList } from './DS';
 
 runArray();
 runSinglyLinkedList();
+runDoublyLinkedList();
