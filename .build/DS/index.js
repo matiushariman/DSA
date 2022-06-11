@@ -19,4 +19,5 @@ var __toModule = (module2) => {
 __markAsModule(exports);
 __reExport(exports, __toModule(require("./Array")));
 __reExport(exports, __toModule(require("./LinkedList")));
+__reExport(exports, __toModule(require("./Stack")));
 //# sourceMappingURL=index.js.map

@@ -20,4 +20,5 @@ var import_DS = __toModule(require("./DS"));
 (0, import_DS.runArray)();
 (0, import_DS.runSinglyLinkedList)();
 (0, import_DS.runDoublyLinkedList)();
+(0, import_DS.runStack)();
 //# sourceMappingURL=index.js.map
