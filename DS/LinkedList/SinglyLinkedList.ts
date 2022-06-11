@@ -94,6 +94,28 @@ const SinglyLinkedList = (value: number) => {
     console.log(`After removing node at index ${index}:`);
     printList();
   }
+
+  function reverse() {
+    if (!head.next) {
+      return head;
+    }
+    let first = head;
+    tail = head;
+    let second = first.next;
+
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+
+    head.next = null;
+    head = first;
+
+    console.log('After reversing the list: ');
+    printList();
+  }
   
   return {
     append,
@@ -101,6 +123,7 @@ const SinglyLinkedList = (value: number) => {
     prepend,
     insert,
     remove,
+    reverse,
   };
 };
 
@@ -118,5 +141,6 @@ export function runSinglyLinkedList() {
   // 1 -> 10 -> 99 -> 5 -> 16
   myLinkedList.insert(2, 99);
   myLinkedList.remove(2);
+  myLinkedList.reverse();
   printEnd(sectionName);
 }

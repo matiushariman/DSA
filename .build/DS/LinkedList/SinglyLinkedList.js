@@ -93,12 +93,31 @@ const SinglyLinkedList = (value) => {
     console.log(`After removing node at index ${index}:`);
     printList();
   }
+  function reverse() {
+    if (!head.next) {
+      return head;
+    }
+    let first = head;
+    tail = head;
+    let second = first.next;
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    head.next = null;
+    head = first;
+    console.log("After reversing the list: ");
+    printList();
+  }
   return {
     append,
     printList,
     prepend,
     insert,
-    remove
+    remove,
+    reverse
   };
 };
 function runSinglyLinkedList() {
@@ -110,6 +129,7 @@ function runSinglyLinkedList() {
   myLinkedList.prepend(1);
   myLinkedList.insert(2, 99);
   myLinkedList.remove(2);
+  myLinkedList.reverse();
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:

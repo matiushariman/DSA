@@ -61,6 +61,7 @@ const DoublyLinkedList = (value) => {
   ;
   function prepend(value2) {
     const newNode = Node(value2);
+    head.prev = newNode;
     newNode.next = head;
     head = newNode;
     length++;
@@ -82,9 +83,13 @@ const DoublyLinkedList = (value) => {
     }
     const newNode = Node(value2);
     const leader = traverseToIndex(index - 1);
-    const pointer = leader.next;
+    const follower = leader.next;
     leader.next = newNode;
-    newNode.next = pointer;
+    newNode.prev = leader;
+    newNode.next = follower;
+    if (follower) {
+      follower.prev = newNode;
+    }
     length++;
     console.log(`After inserting ${value2} to index ${index}:`);
     printList();
