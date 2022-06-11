@@ -1,6 +1,7 @@
-import { runArray, runDoublyLinkedList, runSinglyLinkedList, runLinkedListStack } from './DS';
+import { runArray, runDoublyLinkedList, runSinglyLinkedList, runArrayStack, runLinkedListStack } from './DS';
 
 runArray();
 runSinglyLinkedList();
 runDoublyLinkedList();
+runArrayStack();
 runLinkedListStack();
