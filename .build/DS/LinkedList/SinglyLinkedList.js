@@ -94,6 +94,7 @@ const SinglyLinkedList = (value) => {
     printList();
   }
   function reverse() {
+    var _a, _b;
     if (!head.next) {
       return head;
     }
@@ -101,10 +102,15 @@ const SinglyLinkedList = (value) => {
     tail = head;
     let second = first.next;
     while (second) {
+      console.log(`Assigning ${(_a = second.next) == null ? void 0 : _a.value} to temp.`);
       const temp = second.next;
+      console.log(`replacing ${(_b = second.next) == null ? void 0 : _b.value} with ${first.value}`);
       second.next = first;
+      console.log(`replacing ${first.value} with ${second.value}`);
       first = second;
+      console.log(`replacing ${second.value} with temp.`);
       second = temp;
+      console.log("end while");
     }
     head.next = null;
     head = first;
@@ -123,12 +129,9 @@ const SinglyLinkedList = (value) => {
 function runSinglyLinkedList() {
   const sectionName = "Singly Linked List";
   (0, import_utils.printStart)(sectionName);
-  const myLinkedList = SinglyLinkedList(10);
-  myLinkedList.append(5);
-  myLinkedList.append(16);
-  myLinkedList.prepend(1);
-  myLinkedList.insert(2, 99);
-  myLinkedList.remove(2);
+  const myLinkedList = SinglyLinkedList(1);
+  myLinkedList.append(2);
+  myLinkedList.append(3);
   myLinkedList.reverse();
   (0, import_utils.printEnd)(sectionName);
 }
