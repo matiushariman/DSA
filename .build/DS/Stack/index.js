@@ -50,9 +50,21 @@ const Stack = () => {
     console.log(`After pushing ${value}:`);
     console.log(JSON.stringify(top));
   }
+  function pop() {
+    if (!top) {
+      console.log("Stack is empty!");
+      return null;
+    }
+    console.log(`Removing ${top.value} from the stack`);
+    const pointer = top;
+    top = top.next;
+    length--;
+    console.log(JSON.stringify(top));
+  }
   return {
     peek,
-    push
+    push,
+    pop
   };
 };
 function runStack() {
@@ -62,6 +74,7 @@ function runStack() {
   stack.peek();
   stack.push("hello");
   stack.push("world");
+  stack.pop();
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:

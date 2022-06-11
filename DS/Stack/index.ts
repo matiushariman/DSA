@@ -38,10 +38,25 @@ const Stack = () => {
     console.log(`After pushing ${value}:`);
     console.log(JSON.stringify(top));
   }
+
+    /** remove value from the top of the stack **/
+  function pop() {
+    if (!top) {
+      console.log('Stack is empty!');
+      return null;
+    }
+
+    console.log(`Removing ${top.value} from the stack`);
+    const pointer = top;
+    top = top.next;
+    length--;
+    console.log(JSON.stringify(top));
+  }
   
   return {
     peek,
     push,
+    pop,
   };
 };
 
@@ -52,5 +67,6 @@ export function runStack() {
   stack.peek();
   stack.push('hello');
   stack.push('world');
+  stack.pop();
   printEnd(sectionName);
 }
