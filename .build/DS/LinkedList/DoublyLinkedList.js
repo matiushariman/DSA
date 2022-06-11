@@ -28,14 +28,16 @@ var import_utils = __toModule(require("../../utils"));
 const DoublyLinkedList = (value) => {
   let head = {
     value,
-    next: null
+    next: null,
+    prev: null
   };
   let tail = head;
   let length = 1;
   function Node(value2) {
     return {
       value: value2,
-      next: null
+      next: null,
+      prev: null
     };
   }
   function printList() {
@@ -49,6 +51,7 @@ const DoublyLinkedList = (value) => {
   }
   function append(value2) {
     const newNode = Node(value2);
+    newNode.prev = tail;
     tail.next = newNode;
     tail = newNode;
     length++;

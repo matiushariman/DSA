@@ -3,12 +3,14 @@ import { printStart, printEnd } from '../../utils';
 type DoublyLinkedListNode = {
   value: number;
   next: DoublyLinkedListNode | null;
+  prev: DoublyLinkedListNode | null;
 };
 
 const DoublyLinkedList = (value: number) => {
   let head:DoublyLinkedListNode = {
     value,
     next: null,
+    prev: null,
   };
   let tail = head;
   let length = 1;
@@ -17,6 +19,7 @@ const DoublyLinkedList = (value: number) => {
     return {
       value,
       next: null,
+      prev: null,
     };  
   }
 
@@ -36,6 +39,7 @@ const DoublyLinkedList = (value: number) => {
   /** add new value to the end of SinglyLinkedList **/
   function append(value: number): void {
     const newNode = Node(value);
+    newNode.prev = tail;
     tail.next = newNode;
     tail = newNode;
     length++;
@@ -47,6 +51,7 @@ const DoublyLinkedList = (value: number) => {
   /** add new value to the start of SinglyLinkedList  **/
   function prepend(value:number): void {
     const newNode = Node(value);
+    head.prev = newNode;
     newNode.next = head;
     head = newNode;
     length++;
@@ -76,9 +81,15 @@ const DoublyLinkedList = (value: number) => {
 
     const newNode = Node(value);
     const leader = traverseToIndex(index - 1);
-    const pointer = leader.next;
+    const follower = leader.next;
     leader.next = newNode;
-    newNode.next = pointer;
+    newNode.prev = leader;
+    newNode.next = follower;
+
+    if (follower) {
+      follower.prev = newNode;
+    }
+    
     length++;
 
     console.log(`After inserting ${value} to index ${index}:`);
