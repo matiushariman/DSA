@@ -1,19 +1,19 @@
 import { printStart, printEnd } from '../../utils';
 
-type SinglyLinkedListNode = {
+type DoublyLinkedListNode = {
   value: number;
-  next: SinglyLinkedListNode | null;
+  next: DoublyLinkedListNode | null;
 };
 
-const SinglyLinkedList = (value: number) => {
-  let head:SinglyLinkedListNode = {
+const DoublyLinkedList = (value: number) => {
+  let head:DoublyLinkedListNode = {
     value,
     next: null,
   };
   let tail = head;
   let length = 1;
 
-  function Node(value:number): SinglyLinkedListNode {
+  function Node(value:number): DoublyLinkedListNode {
     return {
       value,
       next: null,
@@ -23,7 +23,7 @@ const SinglyLinkedList = (value: number) => {
     /** print nodes value **/
   function printList():void {
     const arrNodes: number[] = [];
-    let currentNode: SinglyLinkedListNode | null = head;
+    let currentNode: DoublyLinkedListNode | null = head;
     
     while (currentNode !== null) {
       arrNodes.push(currentNode.value);
@@ -57,7 +57,7 @@ const SinglyLinkedList = (value: number) => {
 
   /** traverse to node of specific index **/
   function traverseToIndex(index: number) {
-    let currentNode: SinglyLinkedListNode | null = head;
+    let currentNode: DoublyLinkedListNode | null = head;
     let counter = 0;
 
     while (counter !== index && currentNode.next !== null) {
@@ -105,10 +105,10 @@ const SinglyLinkedList = (value: number) => {
 };
 
 
-export function runSinglyLinkedList() {
-  const sectionName = 'Singly Linked List';
+export function runDoublyLinkedList() {
+  const sectionName = 'Doubly Linked List';
   printStart(sectionName);
-  const myLinkedList = SinglyLinkedList(10);
+  const myLinkedList = DoublyLinkedList(10);
   // 10 -> 5
   myLinkedList.append(5);
   // 10 -> 5 -> 16

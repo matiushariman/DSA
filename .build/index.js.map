@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["import { runArray, runSinglyLinkedList } from './DS';\n\nrunArray();\nrunSinglyLinkedList();"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,gBAA8C;AAE9C;AACA;",
+  "sourcesContent": ["import { runArray, runDoublyLinkedList, runSinglyLinkedList } from './DS';\n\nrunArray();\nrunSinglyLinkedList();\nrunDoublyLinkedList();"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,gBAAmE;AAEnE;AACA;AACA;",
   "names": []
 }
