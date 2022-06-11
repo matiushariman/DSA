@@ -46,6 +46,10 @@ const Stack = () => {
       return null;
     }
 
+    if (top === bottom) {
+      bottom = null;
+    }
+    
     console.log(`Removing ${top.value} from the stack`);
     const pointer = top;
     top = top.next;
