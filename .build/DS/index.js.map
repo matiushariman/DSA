@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../DS/index.ts"],
-  "sourcesContent": ["export * from './Array';\nexport * from './LinkedList';\nexport * from './Stack';"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;AACd,oBAAc;AACd,oBAAc;",
+  "sourcesContent": ["export * from './Array';\nexport * from './LinkedList';\nexport * from './Stack';\nexport * from './Queue';"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;AACd,oBAAc;AACd,oBAAc;AACd,oBAAc;",
   "names": []
 }
