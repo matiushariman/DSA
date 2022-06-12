@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../DS/Graph/index.ts"],
+  "sourcesContent": ["import { printStart, printEnd } from '../../utils';\n\nexport function runGraph() {\n  const sectionName = 'Graph';\n  printStart(sectionName);\n  printEnd(sectionName);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAqC;AAE9B,oBAAoB;AACzB,QAAM,cAAc;AACpB,+BAAW;AACX,6BAAS;AAAA;",
+  "names": []
+}

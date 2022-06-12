@@ -22,4 +22,5 @@ __reExport(exports, __toModule(require("./LinkedList")));
 __reExport(exports, __toModule(require("./Stack")));
 __reExport(exports, __toModule(require("./Queue")));
 __reExport(exports, __toModule(require("./Tree")));
+__reExport(exports, __toModule(require("./Graph")));
 //# sourceMappingURL=index.js.map

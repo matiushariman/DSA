@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["import { runArray, runDoublyLinkedList, runSinglyLinkedList, runArrayStack, runLinkedListStack, runQueue, runBinarySearchTree } from './DS';\n\nrunArray();\nrunSinglyLinkedList();\nrunDoublyLinkedList();\nrunArrayStack();\nrunLinkedListStack();\nrunQueue();\nrunBinarySearchTree();"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,gBAAqI;AAErI;AACA;AACA;AACA;AACA;AACA;AACA;",
+  "sourcesContent": ["import { runArray, runDoublyLinkedList, runSinglyLinkedList, runArrayStack, runLinkedListStack, runQueue, runBinarySearchTree, runGraph } from './DS';\n\nrunArray();\nrunSinglyLinkedList();\nrunDoublyLinkedList();\nrunArrayStack();\nrunLinkedListStack();\nrunQueue();\nrunBinarySearchTree();\nrunGraph();"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,gBAA+I;AAE/I;AACA;AACA;AACA;AACA;AACA;AACA;AACA;",
   "names": []
 }
