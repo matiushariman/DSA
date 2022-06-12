@@ -24,4 +24,5 @@ var import_DS = __toModule(require("./DS"));
 (0, import_DS.runLinkedListStack)();
 (0, import_DS.runQueue)();
 (0, import_DS.runBinarySearchTree)();
+(0, import_DS.runGraph)();
 //# sourceMappingURL=index.js.map

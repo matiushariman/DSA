@@ -1,4 +1,4 @@
-import { runArray, runDoublyLinkedList, runSinglyLinkedList, runArrayStack, runLinkedListStack, runQueue, runBinarySearchTree } from './DS';
+import { runArray, runDoublyLinkedList, runSinglyLinkedList, runArrayStack, runLinkedListStack, runQueue, runBinarySearchTree, runGraph } from './DS';
 
 runArray();
 runSinglyLinkedList();
@@ -7,3 +7,4 @@ runArrayStack();
 runLinkedListStack();
 runQueue();
 runBinarySearchTree();
+runGraph();
