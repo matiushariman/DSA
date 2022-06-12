@@ -46,15 +46,15 @@ const ArrayStack = () => {
     pop
   };
 };
-function runArrayStack() {
-  const sectionName = "ARRAY STACK";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const stack = ArrayStack();
   stack.peek();
   stack.push("hello");
   stack.push("world");
   stack.pop();
-  (0, import_utils.printEnd)(sectionName);
+}
+function runArrayStack() {
+  (0, import_utils.runFunctionWithEdges)("Stack (Array)")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

@@ -120,9 +120,7 @@ const SinglyLinkedList = (value) => {
     reverse
   };
 };
-function runSinglyLinkedList() {
-  const sectionName = "Singly Linked List";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const myLinkedList = SinglyLinkedList(10);
   myLinkedList.append(5);
   myLinkedList.append(16);
@@ -130,7 +128,9 @@ function runSinglyLinkedList() {
   myLinkedList.insert(2, 99);
   myLinkedList.remove(2);
   myLinkedList.reverse();
-  (0, import_utils.printEnd)(sectionName);
+}
+function runSinglyLinkedList() {
+  (0, import_utils.runFunctionWithEdges)("Singly Linked List")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

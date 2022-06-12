@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 
 type MyNode = {
@@ -58,12 +58,13 @@ const Queue = () => {
   };
 }
 
-export function runQueue() {
-  const sectionName = 'Queue';
-  printStart(sectionName);
+function main() {
   const queue = Queue();
   queue.enqueue('Hello');
   queue.enqueue('World');
   queue.dequeue();
-  printEnd(sectionName);
+}
+
+export function runQueue() {
+  runFunctionWithEdges('Queue')(main);
 }

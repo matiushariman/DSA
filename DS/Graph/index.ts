@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 const Graph = () => {
   let numberOfNodes: number = 0;
@@ -27,9 +27,7 @@ const Graph = () => {
   };
 }
 
-export function runGraph() {
-  const sectionName = 'Graph';
-  printStart(sectionName);
+function main() {
   const graph = Graph();
   graph.addVertex('0');
   graph.addVertex('1');
@@ -37,5 +35,8 @@ export function runGraph() {
   graph.addVertex('3');
   graph.addVertex('4');
   graph.addEdge('0', '2');
-  printEnd(sectionName);
+}
+
+export function runGraph() {
+  runFunctionWithEdges('Graph')(main);
 }

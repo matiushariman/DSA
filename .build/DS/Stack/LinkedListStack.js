@@ -70,15 +70,15 @@ const LinkedListStack = () => {
     pop
   };
 };
-function runLinkedListStack() {
-  const sectionName = "LINKED LIST STACK";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const stack = LinkedListStack();
   stack.peek();
   stack.push("hello");
   stack.push("world");
   stack.pop();
-  (0, import_utils.printEnd)(sectionName);
+}
+function runLinkedListStack() {
+  (0, import_utils.runFunctionWithEdges)("Stack (Linked List)")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

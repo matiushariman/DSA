@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 type DoublyLinkedListNode = {
   value: number;
@@ -115,10 +115,7 @@ const DoublyLinkedList = (value: number) => {
   };
 };
 
-
-export function runDoublyLinkedList() {
-  const sectionName = 'Doubly Linked List';
-  printStart(sectionName);
+function main() {
   const myLinkedList = DoublyLinkedList(10);
   // 10 -> 5
   myLinkedList.append(5);
@@ -129,5 +126,8 @@ export function runDoublyLinkedList() {
   // 1 -> 10 -> 99 -> 5 -> 16
   myLinkedList.insert(2, 99);
   myLinkedList.remove(2);
-  printEnd(sectionName);
+}
+
+export function runDoublyLinkedList() {
+  runFunctionWithEdges('Doubly Linked List')(main);
 }

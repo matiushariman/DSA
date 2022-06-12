@@ -45,9 +45,7 @@ const Graph = () => {
     addEdge
   };
 };
-function runGraph() {
-  const sectionName = "Graph";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const graph = Graph();
   graph.addVertex("0");
   graph.addVertex("1");
@@ -55,7 +53,9 @@ function runGraph() {
   graph.addVertex("3");
   graph.addVertex("4");
   graph.addEdge("0", "2");
-  (0, import_utils.printEnd)(sectionName);
+}
+function runGraph() {
+  (0, import_utils.runFunctionWithEdges)("Graph")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

@@ -109,16 +109,16 @@ const DoublyLinkedList = (value) => {
     remove
   };
 };
-function runDoublyLinkedList() {
-  const sectionName = "Doubly Linked List";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const myLinkedList = DoublyLinkedList(10);
   myLinkedList.append(5);
   myLinkedList.append(16);
   myLinkedList.prepend(1);
   myLinkedList.insert(2, 99);
   myLinkedList.remove(2);
-  (0, import_utils.printEnd)(sectionName);
+}
+function runDoublyLinkedList() {
+  (0, import_utils.runFunctionWithEdges)("Doubly Linked List")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

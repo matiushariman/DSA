@@ -6,19 +6,16 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 __export(exports, {
-  printEnd: () => printEnd,
-  printStart: () => printStart
+  runFunctionWithEdges: () => runFunctionWithEdges
 });
-const printStart = (sectionName) => {
+const runFunctionWithEdges = (sectionName) => (fn) => {
   console.log(`=== ${sectionName.toUpperCase()} START ===`);
-};
-const printEnd = (sectionName) => {
+  fn.call(void 0);
   console.log(`=== ${sectionName.toUpperCase()} END ===
 `);
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  printEnd,
-  printStart
+  runFunctionWithEdges
 });
 //# sourceMappingURL=utils.js.map

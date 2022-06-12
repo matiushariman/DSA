@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 type MyNodeProps = {
   left: MyNodeProps,
@@ -76,9 +76,7 @@ const BinarySearchTree = () => {
   };
 };
 
-export function runBinarySearchTree() {
-  const sectionName = 'Binary Search Tree';
-  printStart(sectionName);
+function main() {
   const bst = BinarySearchTree();
   bst.insert(9);
   bst.insert(4);
@@ -86,5 +84,8 @@ export function runBinarySearchTree() {
   bst.insert(1);
   bst.lookup(2);
   bst.lookup(20);
-  printEnd(sectionName);
+}
+
+export function runBinarySearchTree() {
+  runFunctionWithEdges('Binary Search Tree')(main);
 }

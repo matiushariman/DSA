@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 const ArrayStack = () => {
   const array:any = [];
@@ -30,13 +30,14 @@ const ArrayStack = () => {
   };
 };
 
-export function runArrayStack() {
-  const sectionName = 'ARRAY STACK';
-  printStart(sectionName);
+function main() {
   const stack = ArrayStack();
   stack.peek();
   stack.push('hello');
   stack.push('world');
   stack.pop();
-  printEnd(sectionName);
+}
+
+export function runArrayStack() {
+  runFunctionWithEdges('Stack (Array)')(main);
 }

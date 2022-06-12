@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../utils.ts"],
-  "sourcesContent": ["/**\nprint the beginning of section name\n**/\nconst printStart =(sectionName:string):void => {\n  console.log(`=== ${sectionName.toUpperCase()} START ===`);\n};\n\n/**\nprint the end of section name\n**/\nconst printEnd =(sectionName:string):void => {\n  console.log(`=== ${sectionName.toUpperCase()} END ===\\n`);\n};\n\nexport { printEnd, printStart };"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAGA,MAAM,aAAY,CAAC,gBAA4B;AAC7C,UAAQ,IAAI,OAAO,YAAY;AAAA;AAMjC,MAAM,WAAU,CAAC,gBAA4B;AAC3C,UAAQ,IAAI,OAAO,YAAY;AAAA;AAAA;",
+  "sourcesContent": ["/** wrap function call in edges **/\nconst runFunctionWithEdges = (sectionName:string) => (fn: Function) => {\n  console.log(`=== ${sectionName.toUpperCase()} START ===`);\n  fn.call(this);\n  console.log(`=== ${sectionName.toUpperCase()} END ===\\n`);\n}\n\nexport { runFunctionWithEdges };"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AACA,MAAM,uBAAuB,CAAC,gBAAuB,CAAC,OAAiB;AACrE,UAAQ,IAAI,OAAO,YAAY;AAC/B,KAAG,KAAK;AACR,UAAQ,IAAI,OAAO,YAAY;AAAA;AAAA;",
   "names": []
 }

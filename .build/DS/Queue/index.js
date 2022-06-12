@@ -66,14 +66,14 @@ const Queue = () => {
     dequeue
   };
 };
-function runQueue() {
-  const sectionName = "Queue";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const queue = Queue();
   queue.enqueue("Hello");
   queue.enqueue("World");
   queue.dequeue();
-  (0, import_utils.printEnd)(sectionName);
+}
+function runQueue() {
+  (0, import_utils.runFunctionWithEdges)("Queue")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

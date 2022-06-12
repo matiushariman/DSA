@@ -80,9 +80,7 @@ const BinarySearchTree = () => {
     lookup
   };
 };
-function runBinarySearchTree() {
-  const sectionName = "Binary Search Tree";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const bst = BinarySearchTree();
   bst.insert(9);
   bst.insert(4);
@@ -90,7 +88,9 @@ function runBinarySearchTree() {
   bst.insert(1);
   bst.lookup(2);
   bst.lookup(20);
-  (0, import_utils.printEnd)(sectionName);
+}
+function runBinarySearchTree() {
+  (0, import_utils.runFunctionWithEdges)("Binary Search Tree")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

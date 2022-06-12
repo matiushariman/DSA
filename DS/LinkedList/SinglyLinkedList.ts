@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 type SinglyLinkedListNode = {
   value: number;
@@ -127,10 +127,7 @@ const SinglyLinkedList = (value: number) => {
   };
 };
 
-
-export function runSinglyLinkedList() {
-  const sectionName = 'Singly Linked List';
-  printStart(sectionName);
+function main() {
   const myLinkedList = SinglyLinkedList(10);
   // 10 -> 5
   myLinkedList.append(5);
@@ -142,5 +139,8 @@ export function runSinglyLinkedList() {
   myLinkedList.insert(2, 99);
   myLinkedList.remove(2);
   myLinkedList.reverse();
-  printEnd(sectionName);
+}
+
+export function runSinglyLinkedList() {
+  runFunctionWithEdges('Singly Linked List')(main);
 }

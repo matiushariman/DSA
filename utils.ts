@@ -1,15 +1,8 @@
-/**
-print the beginning of section name
-**/
-const printStart =(sectionName:string):void => {
+/** wrap function call in edges **/
+const runFunctionWithEdges = (sectionName:string) => (fn: Function) => {
   console.log(`=== ${sectionName.toUpperCase()} START ===`);
-};
-
-/**
-print the end of section name
-**/
-const printEnd =(sectionName:string):void => {
+  fn.call(this);
   console.log(`=== ${sectionName.toUpperCase()} END ===\n`);
-};
+}
 
-export { printEnd, printStart };
+export { runFunctionWithEdges };

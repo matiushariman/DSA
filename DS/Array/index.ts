@@ -1,4 +1,4 @@
-import { printEnd, printStart } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 const MyArray = () => {
   let length = 0;
@@ -48,14 +48,15 @@ const MyArray = () => {
   };
 };
 
-export function runArray() {
-  const sectionName = 'Array';
-  printStart(sectionName);
+function main() {
   const newArray = MyArray();
   newArray.push(1);
   newArray.push(2);
   newArray.push(3);
   newArray.pop();
   newArray.shift();
-  printEnd(sectionName);
+}
+
+export function runArray(){
+  runFunctionWithEdges('Array')(main);
 }

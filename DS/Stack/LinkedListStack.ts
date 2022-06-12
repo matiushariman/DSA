@@ -1,4 +1,4 @@
-import { printStart, printEnd } from '../../utils';
+import { runFunctionWithEdges } from '../../utils';
 
 type MyNodeProps = {
   value: any,
@@ -64,13 +64,14 @@ const LinkedListStack = () => {
   };
 };
 
-export function runLinkedListStack() {
-  const sectionName = 'LINKED LIST STACK';
-  printStart(sectionName);
+function main() {
   const stack = LinkedListStack();
   stack.peek();
   stack.push('hello');
   stack.push('world');
   stack.pop();
-  printEnd(sectionName);
+}
+
+export function runLinkedListStack() {
+  runFunctionWithEdges('Stack (Linked List)')(main);
 }

@@ -60,16 +60,16 @@ const MyArray = () => {
     shift
   };
 };
-function runArray() {
-  const sectionName = "Array";
-  (0, import_utils.printStart)(sectionName);
+function main() {
   const newArray = MyArray();
   newArray.push(1);
   newArray.push(2);
   newArray.push(3);
   newArray.pop();
   newArray.shift();
-  (0, import_utils.printEnd)(sectionName);
+}
+function runArray() {
+  (0, import_utils.runFunctionWithEdges)("Array")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
