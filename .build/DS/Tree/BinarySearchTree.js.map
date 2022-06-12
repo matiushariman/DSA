@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../DS/Tree/BinarySearchTree.ts"],
+  "sourcesContent": ["import { printStart, printEnd } from '../../utils';\n\ntype MyNodeProps = {\n  left: MyNodeProps,\n  right: MyNodeProps,\n  value: number,\n} | null;\n\nconst MyNode = (value:number): MyNodeProps => ({\n  left: null,\n  right: null,\n  value,\n});\n\nconst BinarySearchTree = () => {\n  let root: MyNodeProps = null;\n\n  function insert(value: number) {\n  }\n\n  function lookup(value:number) {\n  }\n\n  return {\n    insert,\n    lookup,\n  };\n};\n\nexport function runBinarySearchTree() {\n  const sectionName = 'Binary Search Tree';\n  printStart(sectionName);\n  printEnd(sectionName);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAqC;AAQrC,MAAM,SAAS,CAAC,UAA+B;AAAA,EAC7C,MAAM;AAAA,EACN,OAAO;AAAA,EACP;AAAA;AAGF,MAAM,mBAAmB,MAAM;AAC7B,MAAI,OAAoB;AAExB,kBAAgB,OAAe;AAAA;AAG/B,kBAAgB,OAAc;AAAA;AAG9B,SAAO;AAAA,IACL;AAAA,IACA;AAAA;AAAA;AAIG,+BAA+B;AACpC,QAAM,cAAc;AACpB,+BAAW;AACX,6BAAS;AAAA;",
+  "names": []
+}
