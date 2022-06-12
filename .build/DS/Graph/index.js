@@ -35,6 +35,10 @@ const Graph = () => {
     console.log(JSON.stringify(adjacentList, null, 2));
   }
   function addEdge(node1, node2) {
+    adjacentList[node1].push(node2);
+    adjacentList[node2].push(node1);
+    console.log("After adding edge: ");
+    console.log(JSON.stringify(adjacentList, null, 2));
   }
   return {
     addVertex,
@@ -50,6 +54,7 @@ function runGraph() {
   graph.addVertex("2");
   graph.addVertex("3");
   graph.addVertex("4");
+  graph.addEdge("0", "2");
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:

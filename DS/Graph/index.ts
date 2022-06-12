@@ -2,7 +2,7 @@ import { printStart, printEnd } from '../../utils';
 
 const Graph = () => {
   let numberOfNodes: number = 0;
-  const adjacentList: {[key: string]: string[] | number[]} = {};
+  const adjacentList: {[key: string]: string[]} = {};
 
   /** add vertex **/
   function addVertex(node: string) {
@@ -12,7 +12,13 @@ const Graph = () => {
     console.log(JSON.stringify(adjacentList, null, 2));
   }
 
-  function addEdge(node1, node2) {
+  /** add edge to vertex **/
+  function addEdge(node1:string, node2:string) {
+    adjacentList[node1].push(node2);
+    adjacentList[node2].push(node1);
+
+    console.log('After adding edge: ');
+    console.log(JSON.stringify(adjacentList, null, 2));
   }
 
   return {
@@ -30,5 +36,6 @@ export function runGraph() {
   graph.addVertex('2');
   graph.addVertex('3');
   graph.addVertex('4');
+  graph.addEdge('0', '2');
   printEnd(sectionName);
 }
