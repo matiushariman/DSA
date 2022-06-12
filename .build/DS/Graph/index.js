@@ -25,9 +25,31 @@ __export(exports, {
   runGraph: () => runGraph
 });
 var import_utils = __toModule(require("../../utils"));
+const Graph = () => {
+  let numberOfNodes = 0;
+  const adjacentList = {};
+  function addVertex(node) {
+    adjacentList[node] = [];
+    numberOfNodes++;
+    console.log(`After adding vertex ${node}:`);
+    console.log(JSON.stringify(adjacentList, null, 2));
+  }
+  function addEdge(node1, node2) {
+  }
+  return {
+    addVertex,
+    addEdge
+  };
+};
 function runGraph() {
   const sectionName = "Graph";
   (0, import_utils.printStart)(sectionName);
+  const graph = Graph();
+  graph.addVertex("0");
+  graph.addVertex("1");
+  graph.addVertex("2");
+  graph.addVertex("3");
+  graph.addVertex("4");
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:
