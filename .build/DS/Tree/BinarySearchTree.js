@@ -58,6 +58,22 @@ const BinarySearchTree = () => {
     console.log(JSON.stringify(root, null, 2));
   }
   function lookup(value) {
+    if (!root) {
+      console.log("Tree is empty.");
+      return;
+    }
+    let currentNode = root;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (value === currentNode.value) {
+        console.log(`Found value ${value} in the tree.`);
+        return;
+      }
+    }
+    console.log(`Value ${value} not found.`);
   }
   return {
     insert,
@@ -68,9 +84,12 @@ function runBinarySearchTree() {
   const sectionName = "Binary Search Tree";
   (0, import_utils.printStart)(sectionName);
   const bst = BinarySearchTree();
-  bst.insert(10);
-  bst.insert(8);
-  bst.insert(12);
+  bst.insert(9);
+  bst.insert(4);
+  bst.insert(20);
+  bst.insert(1);
+  bst.lookup(2);
+  bst.lookup(20);
   (0, import_utils.printEnd)(sectionName);
 }
 // Annotate the CommonJS export names for ESM import in node:

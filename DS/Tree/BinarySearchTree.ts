@@ -47,7 +47,27 @@ const BinarySearchTree = () => {
     console.log(JSON.stringify(root, null, 2));
   }
 
+  /** check if value exists **/
   function lookup(value:number) {
+    if (!root) {
+      console.log('Tree is empty.');
+      return;
+    }
+
+    let currentNode: MyNodeProps | null = root;
+    
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (value === currentNode.value) {
+        console.log(`Found value ${value} in the tree.`);
+        return;
+      }
+    }
+
+    console.log(`Value ${value} not found.`);
   }
   
   return {
@@ -60,9 +80,11 @@ export function runBinarySearchTree() {
   const sectionName = 'Binary Search Tree';
   printStart(sectionName);
   const bst = BinarySearchTree();
-  bst.insert(10);
-  bst.insert(8);
-  bst.insert(12);
-  
+  bst.insert(9);
+  bst.insert(4);
+  bst.insert(20);
+  bst.insert(1);
+  bst.lookup(2);
+  bst.lookup(20);
   printEnd(sectionName);
 }
