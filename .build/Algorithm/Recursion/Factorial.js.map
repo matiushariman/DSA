@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Recursion/Factorial.ts"],
+  "sourcesContent": ["/** calculate factorial recursively **/\nexport const findFactorialRecursive = (number: number):number => {\n  if (number === 1) {\n    return number;\n  }\n\n  return (number * findFactorialRecursive(number - 1));\n};\n\n/** calculate factorial iteratively **/\nexport const findFactorialIterative = (number: number):number => {\n  let factorial = number;\n\n  for (let i = number - 1; i > 0; i--) {\n    factorial = factorial * i;\n  }\n\n  return factorial;\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AACO,MAAM,yBAAyB,CAAC,WAA0B;AAC/D,MAAI,WAAW,GAAG;AAChB,WAAO;AAAA;AAGT,SAAQ,SAAS,uBAAuB,SAAS;AAAA;AAI5C,MAAM,yBAAyB,CAAC,WAA0B;AAC/D,MAAI,YAAY;AAEhB,WAAS,IAAI,SAAS,GAAG,IAAI,GAAG,KAAK;AACnC,gBAAY,YAAY;AAAA;AAG1B,SAAO;AAAA;",
+  "names": []
+}

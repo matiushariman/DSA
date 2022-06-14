@@ -1,3 +1,4 @@
+import { runRecursion } from './Algorithm';
 import { runArray, runDoublyLinkedList, runSinglyLinkedList, runArrayStack, runLinkedListStack, runQueue, runBinarySearchTree, runGraph } from './DS';
 
 runArray();
@@ -8,3 +9,5 @@ runLinkedListStack();
 runQueue();
 runBinarySearchTree();
 runGraph();
+
+runRecursion();
