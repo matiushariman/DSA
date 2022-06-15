@@ -25,6 +25,7 @@ __export(exports, {
   runRecursion: () => runRecursion
 });
 var import_Factorial = __toModule(require("./Factorial"));
+var import_Fibonacci = __toModule(require("./Fibonacci"));
 var import_utils = __toModule(require("../../utils"));
 let counter = 0;
 const inception = () => {
@@ -37,6 +38,7 @@ const inception = () => {
 };
 function main() {
   console.log(`Factorial of 5 is ${(0, import_Factorial.findFactorialRecursive)(5)}`);
+  console.log(`Fibonacci number at index 5 is ${(0, import_Fibonacci.fibonacciRecursive)(8)}`);
 }
 function runRecursion() {
   (0, import_utils.runFunctionWithEdges)("Recursion")(main);

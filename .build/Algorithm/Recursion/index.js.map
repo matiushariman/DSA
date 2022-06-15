@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../Algorithm/Recursion/index.ts"],
-  "sourcesContent": ["import { findFactorialRecursive, } from './Factorial';\nimport { runFunctionWithEdges } from '../../utils';\n\nlet counter = 0;\n\nconst inception = ():void => {\n  if (counter > 3) {\n    console.log('done');\n\n    return;\n  }\n\n  counter++;\n  inception();\n};\n\nfunction main() {\n  console.log(`Factorial of 5 is ${findFactorialRecursive(5)}`);\n}\n\nexport function runRecursion() {\n  runFunctionWithEdges('Recursion')(main);\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,uBAAwC;AACxC,mBAAqC;AAErC,IAAI,UAAU;AAEd,MAAM,YAAY,MAAW;AAC3B,MAAI,UAAU,GAAG;AACf,YAAQ,IAAI;AAEZ;AAAA;AAGF;AACA;AAAA;AAGF,gBAAgB;AACd,UAAQ,IAAI,qBAAqB,6CAAuB;AAAA;AAGnD,wBAAwB;AAC7B,yCAAqB,aAAa;AAAA;",
+  "sourcesContent": ["import { findFactorialRecursive, } from './Factorial';\nimport { fibonacciRecursive } from './Fibonacci';\nimport { runFunctionWithEdges } from '../../utils';\n\nlet counter = 0;\n\nconst inception = ():void => {\n  if (counter > 3) {\n    console.log('done');\n\n    return;\n  }\n\n  counter++;\n  inception();\n};\n\nfunction main() {\n  console.log(`Factorial of 5 is ${findFactorialRecursive(5)}`);\n  console.log(`Fibonacci number at index 5 is ${fibonacciRecursive(8)}`);\n}\n\nexport function runRecursion() {\n  runFunctionWithEdges('Recursion')(main);\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,uBAAwC;AACxC,uBAAmC;AACnC,mBAAqC;AAErC,IAAI,UAAU;AAEd,MAAM,YAAY,MAAW;AAC3B,MAAI,UAAU,GAAG;AACf,YAAQ,IAAI;AAEZ;AAAA;AAGF;AACA;AAAA;AAGF,gBAAgB;AACd,UAAQ,IAAI,qBAAqB,6CAAuB;AACxD,UAAQ,IAAI,kCAAkC,yCAAmB;AAAA;AAG5D,wBAAwB;AAC7B,yCAAqB,aAAa;AAAA;",
   "names": []
 }
