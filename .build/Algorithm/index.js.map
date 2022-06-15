@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../Algorithm/index.ts"],
+  "sourcesContent": ["export * from './Recursion';"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;",
+  "names": []
+}
