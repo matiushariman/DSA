@@ -1,4 +1,5 @@
 import { bubbleSort } from './BubbleSort';
+import { insertionSort } from './InsertionSort';
 import { selectionSort } from './SelectionSort';
 import { runFunctionWithEdges, } from '../../utils';
 
@@ -7,6 +8,7 @@ function main() {
 
   bubbleSort(numbers);
   selectionSort(numbers);
+  insertionSort(numbers);
 }
 
 export function runSorting() {

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../Algorithm/Sorting/index.ts"],
-  "sourcesContent": ["import { bubbleSort } from './BubbleSort';\nimport { selectionSort } from './SelectionSort';\nimport { runFunctionWithEdges, } from '../../utils';\n\nfunction main() {\n  const numbers = [2,65,34,2,1,7,8];\n\n  bubbleSort(numbers);\n  selectionSort(numbers);\n}\n\nexport function runSorting() {\n  runFunctionWithEdges('Sorting')(main);\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,wBAA2B;AAC3B,2BAA8B;AAC9B,mBAAsC;AAEtC,gBAAgB;AACd,QAAM,UAAU,CAAC,GAAE,IAAG,IAAG,GAAE,GAAE,GAAE;AAE/B,oCAAW;AACX,0CAAc;AAAA;AAGT,sBAAsB;AAC3B,yCAAqB,WAAW;AAAA;",
+  "sourcesContent": ["import { bubbleSort } from './BubbleSort';\nimport { insertionSort } from './InsertionSort';\nimport { selectionSort } from './SelectionSort';\nimport { runFunctionWithEdges, } from '../../utils';\n\nfunction main() {\n  const numbers = [2,65,34,2,1,7,8];\n\n  bubbleSort(numbers);\n  selectionSort(numbers);\n  insertionSort(numbers);\n}\n\nexport function runSorting() {\n  runFunctionWithEdges('Sorting')(main);\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,wBAA2B;AAC3B,2BAA8B;AAC9B,2BAA8B;AAC9B,mBAAsC;AAEtC,gBAAgB;AACd,QAAM,UAAU,CAAC,GAAE,IAAG,IAAG,GAAE,GAAE,GAAE;AAE/B,oCAAW;AACX,0CAAc;AACd,0CAAc;AAAA;AAGT,sBAAsB;AAC3B,yCAAqB,WAAW;AAAA;",
   "names": []
 }
