@@ -22,21 +22,27 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 __export(exports, {
-  runSorting: () => runSorting
+  selectionSort: () => selectionSort
 });
-var import_BubbleSort = __toModule(require("./BubbleSort"));
-var import_SelectionSort = __toModule(require("./SelectionSort"));
 var import_utils = __toModule(require("../../utils"));
-function main() {
-  const numbers = [2, 65, 34, 2, 1, 7, 8];
-  (0, import_BubbleSort.bubbleSort)(numbers);
-  (0, import_SelectionSort.selectionSort)(numbers);
-}
-function runSorting() {
-  (0, import_utils.runFunctionWithEdges)("Sorting")(main);
-}
+const selectionSort = (arr) => {
+  const start = performance.now();
+  for (let i = 0; i < arr.length; i++) {
+    let smallestItemIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[smallestItemIndex] > arr[j]) {
+        smallestItemIndex = j;
+      }
+    }
+    const temp = arr[i];
+    arr[i] = arr[smallestItemIndex];
+    arr[smallestItemIndex] = temp;
+  }
+  console.log(`Selection sort result: ${arr}`);
+  console.log(`Selection sort takes ${(0, import_utils.convertToSecond)(performance.now() - start)} s.`);
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  runSorting
+  selectionSort
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=SelectionSort.js.map
