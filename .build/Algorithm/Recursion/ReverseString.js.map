@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Recursion/ReverseString.ts"],
+  "sourcesContent": ["/** reverse string using recursion **/\nexport const reverseString = (str:string):string => {\n  if (str.length === 1) {\n    return str;\n  }\n\n  return reverseString(str.slice(1, str.length)) + str.charAt(0);\n};"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AACO,MAAM,gBAAgB,CAAC,QAAsB;AAClD,MAAI,IAAI,WAAW,GAAG;AACpB,WAAO;AAAA;AAGT,SAAO,cAAc,IAAI,MAAM,GAAG,IAAI,WAAW,IAAI,OAAO;AAAA;",
+  "names": []
+}
