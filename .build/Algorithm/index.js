@@ -18,4 +18,5 @@ var __toModule = (module2) => {
 };
 __markAsModule(exports);
 __reExport(exports, __toModule(require("./Recursion")));
+__reExport(exports, __toModule(require("./Sorting")));
 //# sourceMappingURL=index.js.map

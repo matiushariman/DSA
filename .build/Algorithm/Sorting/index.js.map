@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Sorting/index.ts"],
+  "sourcesContent": ["import { bubbleSort } from './BubbleSort';\nimport { runFunctionWithEdges, } from '../../utils';\n\nfunction main() {\n  const numbers = [2,65,34,2,1,7,8];\n\n  bubbleSort(numbers);\n}\n\nexport function runSorting() {\n  runFunctionWithEdges('Sorting')(main);\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,wBAA2B;AAC3B,mBAAsC;AAEtC,gBAAgB;AACd,QAAM,UAAU,CAAC,GAAE,IAAG,IAAG,GAAE,GAAE,GAAE;AAE/B,oCAAW;AAAA;AAGN,sBAAsB;AAC3B,yCAAqB,WAAW;AAAA;",
+  "names": []
+}
