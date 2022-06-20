@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Sorting/InsertionSort.ts"],
+  "sourcesContent": ["import { convertToSecond } from '../../utils';\n\n/** sort array of numbers using insertion sort **/\nexport const insertionSort = (arr: number[]): void => {\n  const start = performance.now();\n\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < arr[0]) {\n      arr.unshift(arr.splice(i, 1)[0]);\n    } else {\n      for (let j = 1; j < i; j++) {\n        if (arr[i] < arr[j]) {\n          arr.splice(j, 0, arr.splice(i, 1)[0]);\n        }\n      }\n    }\n  }\n  console.log(`Insertion sort result: ${arr}`);\n  console.log(`Insertion sort takes ${convertToSecond(performance.now() - start)} s.`);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAgC;AAGzB,MAAM,gBAAgB,CAAC,QAAwB;AACpD,QAAM,QAAQ,YAAY;AAE1B,WAAS,IAAI,GAAG,IAAI,IAAI,QAAQ,KAAK;AACnC,QAAI,IAAI,KAAK,IAAI,IAAI;AACnB,UAAI,QAAQ,IAAI,OAAO,GAAG,GAAG;AAAA,WACxB;AACL,eAAS,IAAI,GAAG,IAAI,GAAG,KAAK;AAC1B,YAAI,IAAI,KAAK,IAAI,IAAI;AACnB,cAAI,OAAO,GAAG,GAAG,IAAI,OAAO,GAAG,GAAG;AAAA;AAAA;AAAA;AAAA;AAK1C,UAAQ,IAAI,0BAA0B;AACtC,UAAQ,IAAI,wBAAwB,kCAAgB,YAAY,QAAQ;AAAA;",
+  "names": []
+}

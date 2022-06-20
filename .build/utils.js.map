@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../utils.ts"],
-  "sourcesContent": ["/** wrap function call in edges **/\nconst runFunctionWithEdges = (sectionName:string) => (fn: Function) => {\n  console.log(`=== ${sectionName.toUpperCase()} START ===`);\n  fn.call(this);\n  console.log(`=== ${sectionName.toUpperCase()} END ===\\n`);\n}\n\nexport { runFunctionWithEdges };"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AACA,MAAM,uBAAuB,CAAC,gBAAuB,CAAC,OAAiB;AACrE,UAAQ,IAAI,OAAO,YAAY;AAC/B,KAAG,KAAK;AACR,UAAQ,IAAI,OAAO,YAAY;AAAA;AAAA;",
+  "sourcesContent": ["/** wrap function call in edges **/\nconst runFunctionWithEdges = (sectionName:string) => (fn: Function) => {\n  console.log(`=== ${sectionName.toUpperCase()} START ===`);\n  fn.call(this);\n  console.log(`=== ${sectionName.toUpperCase()} END ===\\n`);\n};\n\nconst convertToSecond = (millisecond: number):string => ((millisecond % 60000) / 1000).toFixed(5);\n\nexport { runFunctionWithEdges, convertToSecond };\n\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AACA,MAAM,uBAAuB,CAAC,gBAAuB,CAAC,OAAiB;AACrE,UAAQ,IAAI,OAAO,YAAY;AAC/B,KAAG,KAAK;AACR,UAAQ,IAAI,OAAO,YAAY;AAAA;AAAA;AAGjC,MAAM,kBAAkB,CAAC,gBAAiC,eAAc,MAAS,KAAM,QAAQ;",
   "names": []
 }

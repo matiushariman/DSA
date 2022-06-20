@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Sorting/BubbleSort.ts"],
+  "sourcesContent": ["import { convertToSecond } from '../../utils';\n\n/** sort array of numbers using bubble sort **/\nexport const bubbleSort = (arr: number[]): void => {\n  const start = performance.now();\n\n  for (let i = 0; i < arr.length; i++) {\n    for (let j = 0; j < arr.length; j++) {\n      if (arr[j] > arr[j+1]) {\n        let temp = arr[j];\n        arr[j] = arr[j+1];\n        arr[j+1] = temp;\n      }\n    }\n  }\n  \n  console.log(`Bubble sort result: ${arr}`);\n  console.log(`Bubble sort takes ${convertToSecond(performance.now() - start)} s.`);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAgC;AAGzB,MAAM,aAAa,CAAC,QAAwB;AACjD,QAAM,QAAQ,YAAY;AAE1B,WAAS,IAAI,GAAG,IAAI,IAAI,QAAQ,KAAK;AACnC,aAAS,IAAI,GAAG,IAAI,IAAI,QAAQ,KAAK;AACnC,UAAI,IAAI,KAAK,IAAI,IAAE,IAAI;AACrB,YAAI,OAAO,IAAI;AACf,YAAI,KAAK,IAAI,IAAE;AACf,YAAI,IAAE,KAAK;AAAA;AAAA;AAAA;AAKjB,UAAQ,IAAI,uBAAuB;AACnC,UAAQ,IAAI,qBAAqB,kCAAgB,YAAY,QAAQ;AAAA;",
+  "names": []
+}

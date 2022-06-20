@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Sorting/SelectionSort.ts"],
+  "sourcesContent": ["import { convertToSecond } from '../../utils';\n\n/** sort array of numbers using selection sort **/\nexport const selectionSort = (arr: number[]): void => {\n  const start = performance.now();\n\n  for (let i = 0; i < arr.length; i++) {\n    let smallestItemIndex = i;\n  \n    for (let j = i + 1; j < arr.length; j++) {\n      if (arr[smallestItemIndex] > arr[j]) {\n        smallestItemIndex = j;\n      }\n    }\n    const temp = arr[i];\n    arr[i] = arr[smallestItemIndex];\n    arr[smallestItemIndex] = temp;\n  }\n  \n  console.log(`Selection sort result: ${arr}`);\n  console.log(`Selection sort takes ${convertToSecond(performance.now() - start)} s.`);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAgC;AAGzB,MAAM,gBAAgB,CAAC,QAAwB;AACpD,QAAM,QAAQ,YAAY;AAE1B,WAAS,IAAI,GAAG,IAAI,IAAI,QAAQ,KAAK;AACnC,QAAI,oBAAoB;AAExB,aAAS,IAAI,IAAI,GAAG,IAAI,IAAI,QAAQ,KAAK;AACvC,UAAI,IAAI,qBAAqB,IAAI,IAAI;AACnC,4BAAoB;AAAA;AAAA;AAGxB,UAAM,OAAO,IAAI;AACjB,QAAI,KAAK,IAAI;AACb,QAAI,qBAAqB;AAAA;AAG3B,UAAQ,IAAI,0BAA0B;AACtC,UAAQ,IAAI,wBAAwB,kCAAgB,YAAY,QAAQ;AAAA;",
+  "names": []
+}

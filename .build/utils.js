@@ -6,6 +6,7 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 __export(exports, {
+  convertToSecond: () => convertToSecond,
   runFunctionWithEdges: () => runFunctionWithEdges
 });
 const runFunctionWithEdges = (sectionName) => (fn) => {
@@ -14,8 +15,10 @@ const runFunctionWithEdges = (sectionName) => (fn) => {
   console.log(`=== ${sectionName.toUpperCase()} END ===
 `);
 };
+const convertToSecond = (millisecond) => (millisecond % 6e4 / 1e3).toFixed(5);
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  convertToSecond,
   runFunctionWithEdges
 });
 //# sourceMappingURL=utils.js.map
