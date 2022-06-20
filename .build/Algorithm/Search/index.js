@@ -18,4 +18,5 @@ var __toModule = (module2) => {
 };
 __markAsModule(exports);
 __reExport(exports, __toModule(require("./BFS")));
+__reExport(exports, __toModule(require("./DFS")));
 //# sourceMappingURL=index.js.map

@@ -29,4 +29,5 @@ var import_DS = __toModule(require("./DS"));
 (0, import_Algorithm.runRecursion)();
 (0, import_Algorithm.runSorting)();
 (0, import_Algorithm.runBFS)();
+(0, import_Algorithm.runDFS)();
 //# sourceMappingURL=index.js.map

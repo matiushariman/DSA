@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../Algorithm/Search/index.ts"],
-  "sourcesContent": ["export * from './BFS';"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;",
+  "sourcesContent": ["export * from './BFS';\nexport * from './DFS';"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;AACd,oBAAc;",
   "names": []
 }
