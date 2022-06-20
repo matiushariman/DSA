@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Search/index.ts"],
+  "sourcesContent": ["export * from './BFS';"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA,oBAAc;",
+  "names": []
+}

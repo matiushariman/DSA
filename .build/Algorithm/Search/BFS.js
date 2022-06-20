@@ -23,7 +23,7 @@ var __toModule = (module2) => {
 };
 __export(exports, {
   BinarySearchTree: () => BinarySearchTree,
-  runBinarySearchTree: () => runBinarySearchTree
+  runBFS: () => runBFS
 });
 var import_utils = __toModule(require("../../utils"));
 const MyNode = (value) => ({
@@ -55,47 +55,51 @@ const BinarySearchTree = () => {
         }
       }
     }
-    console.log(`After inserting ${value}:`);
-    console.log(JSON.stringify(root, null, 2));
   }
-  function lookup(value) {
-    if (!root) {
-      console.log("Tree is empty.");
-      return;
-    }
+  function breadthFirstSearch() {
     let currentNode = root;
-    while (currentNode) {
-      if (value < currentNode.value) {
-        currentNode = currentNode.left;
-      } else if (value > currentNode.value) {
-        currentNode = currentNode.right;
-      } else if (value === currentNode.value) {
-        console.log(`Found value ${value} in the tree.`);
-        return;
+    const list = [];
+    const queue = [];
+    if (currentNode) {
+      queue.push(currentNode);
+    }
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+      if (currentNode) {
+        list.push(currentNode.value);
+        if (currentNode.left) {
+          queue.push(currentNode.left);
+        }
+        if (currentNode.right) {
+          queue.push(currentNode.right);
+        }
       }
     }
-    console.log(`Value ${value} not found.`);
+    return list;
   }
   return {
     insert,
-    lookup
+    breadthFirstSearch
   };
 };
 function main() {
   const bst = BinarySearchTree();
   bst.insert(9);
   bst.insert(4);
+  bst.insert(6);
   bst.insert(20);
+  bst.insert(170);
+  bst.insert(15);
   bst.insert(1);
-  bst.lookup(2);
-  bst.lookup(20);
+  const bfs = bst.breadthFirstSearch();
+  console.log("breadth first search: ", bfs);
 }
-function runBinarySearchTree() {
-  (0, import_utils.runFunctionWithEdges)("Binary Search Tree")(main);
+function runBFS() {
+  (0, import_utils.runFunctionWithEdges)("BFS")(main);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   BinarySearchTree,
-  runBinarySearchTree
+  runBFS
 });
-//# sourceMappingURL=BinarySearchTree.js.map
+//# sourceMappingURL=BFS.js.map

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../Algorithm/Sorting/MergeSort.ts"],
+  "sourcesContent": ["const merge = (left: number[], right: number[]): number[] => {\n  const result:number[] = [];\n  let leftIndex:number = 0;\n  let rightIndex:number = 0;\n\n  while (leftIndex < left.length && rightIndex < right.length)   {\n    if (left[leftIndex] < right[rightIndex]) {\n      result.push(left[leftIndex]);\n      leftIndex++;\n    } else {\n      result.push(right[rightIndex]);\n      rightIndex++;\n    }\n  }\n\n  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));\n};\n\nconst mergeSort = (arr: number[]): number[] => {\n  if (arr.length === 1) {\n    return arr;\n  }\n\n  const middle:number = Math.floor(arr.length / 2);\n  const left:number[] = arr.slice(0, middle);\n  const right:number[] = arr.slice(middle);\n\n  return merge(mergeSort(left), mergeSort(right));\n};"],
+  "mappings": "AAAA,MAAM,QAAQ,CAAC,MAAgB,UAA8B;AAC3D,QAAM,SAAkB;AACxB,MAAI,YAAmB;AACvB,MAAI,aAAoB;AAExB,SAAO,YAAY,KAAK,UAAU,aAAa,MAAM,QAAU;AAC7D,QAAI,KAAK,aAAa,MAAM,aAAa;AACvC,aAAO,KAAK,KAAK;AACjB;AAAA,WACK;AACL,aAAO,KAAK,MAAM;AAClB;AAAA;AAAA;AAIJ,SAAO,OAAO,OAAO,KAAK,MAAM,YAAY,OAAO,MAAM,MAAM;AAAA;AAGjE,MAAM,YAAY,CAAC,QAA4B;AAC7C,MAAI,IAAI,WAAW,GAAG;AACpB,WAAO;AAAA;AAGT,QAAM,SAAgB,KAAK,MAAM,IAAI,SAAS;AAC9C,QAAM,OAAgB,IAAI,MAAM,GAAG;AACnC,QAAM,QAAiB,IAAI,MAAM;AAEjC,SAAO,MAAM,UAAU,OAAO,UAAU;AAAA;",
+  "names": []
+}

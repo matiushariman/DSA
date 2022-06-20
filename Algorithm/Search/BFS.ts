@@ -1,4 +1,4 @@
-import { runFunctionWithEdges } from '../../utils';
+import { runFunctionWithEdges, } from '../../utils';
 
 type MyNodeProps = {
   left: MyNodeProps,
@@ -42,37 +42,40 @@ export const BinarySearchTree = () => {
         }
       }
     }
-
-    console.log(`After inserting ${value}:`);
-    console.log(JSON.stringify(root, null, 2));
   }
 
-  /** check if value exists **/
-  function lookup(value:number) {
-    if (!root) {
-      console.log('Tree is empty.');
-      return;
+  function breadthFirstSearch() {
+    let currentNode = root;
+    const list:number[] = [];
+    const queue:any[] = [];
+
+    if (currentNode) {
+      queue.push(currentNode);
     }
 
-    let currentNode: MyNodeProps | null = root;
-    
-    while (currentNode) {
-      if (value < currentNode.value) {
-        currentNode = currentNode.left;
-      } else if (value > currentNode.value) {
-        currentNode = currentNode.right;
-      } else if (value === currentNode.value) {
-        console.log(`Found value ${value} in the tree.`);
-        return;
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+
+      if (currentNode) {
+        list.push(currentNode.value);
+
+        if (currentNode.left) {
+          queue.push(currentNode.left);
+        }
+
+        if (currentNode.right) {
+          queue.push(currentNode.right);
+        }
       }
     }
 
-    console.log(`Value ${value} not found.`);
+    return list;
   }
+
   
   return {
     insert,
-    lookup,
+    breadthFirstSearch,
   };
 };
 
@@ -80,12 +83,16 @@ function main() {
   const bst = BinarySearchTree();
   bst.insert(9);
   bst.insert(4);
+  bst.insert(6);
   bst.insert(20);
+  bst.insert(170);
+  bst.insert(15);
   bst.insert(1);
-  bst.lookup(2);
-  bst.lookup(20);
+  const bfs = bst.breadthFirstSearch();
+
+  console.log('breadth first search: ', bfs);
 }
 
-export function runBinarySearchTree() {
-  runFunctionWithEdges('Binary Search Tree')(main);
+export function runBFS() {
+  runFunctionWithEdges('BFS')(main);
 }
