@@ -79,10 +79,23 @@ const BinarySearchTree = () => {
     }
     return list;
   }
+  function postOrder(list = [], node = root) {
+    if (node) {
+      if (node.left) {
+        postOrder(list, node.left);
+      }
+      if (node.right) {
+        postOrder(list, node.right);
+      }
+      list.push(node.value);
+    }
+    return list;
+  }
   return {
     insert,
     inOrder,
-    preOrder
+    preOrder,
+    postOrder
   };
 };
 function main() {
@@ -98,6 +111,8 @@ function main() {
   console.log("InOrder Traversal: ", inOrderList);
   const preOrderList = bst.preOrder();
   console.log("PreOrder Traversal: ", preOrderList);
+  const postOrderList = bst.postOrder();
+  console.log("PostOrder Traversal: ", postOrderList);
 }
 function runDFS() {
   (0, import_utils.runFunctionWithEdges)("DFS")(main);
